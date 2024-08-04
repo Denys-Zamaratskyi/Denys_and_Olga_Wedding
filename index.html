@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="libs/gsap/gsap.min.js" defer></script>
+    <script src="libs/gsap/ScrollTrigger.min.js" defer></script>
+    <script src="libs/gsap/ScrollSmoother.min.js" defer></script>
+
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <header class="hero-section">
+                <img data-lag=".5" data-speed=".6" class="hero" src="img/hero.jpg" alt="hero">
+                <div class="container">
+                    <div data-speed=".75" class="main-header">
+                        <h1 class="main-title">Запрошуємо на весілля</h1>
+                    </div>
+                </div>
+            </header>
+            <div class="portfolio">
+                <div class="container">
+                    <div class="gallery">
+                        <div data-speed=".9" class="gallery__left">
+                            <img class="gallery__item" src="img/work/1.jpg" alt="1">
+                            <img class="gallery__item" src="img/work/2.jpg" alt="2">
+                            <div class="text-block gallery__item">
+                                <h2 class="text-block__h">Не обтяжуйте себе вибором подарунку чи букетів, ваші побажання в конвертах допоможуть здійснити нашу мрію про власний будиночок у с.Клавдієво-Тарасове </h2>
+                                <p class="text-block__p"></p>
+                                <p class="text-block__p"></p>
+                            </div>
+                            <img class="gallery__item" src="img/work/6.jpg" alt="6">                            
+                            <h2 class="text-block__h">Для наших маленьких гостей у ресторані передбачено дитячу кімнату та ігровий майданчик, щоб батьки змогли насолодитися святом.</h2>
+                            <h3 class="text-block__h">Будь ласка, підтвердіть вашу присутність на нашому святі до 01 вересня 2024 особисто або телефонним дзвінком чи за формою внизу.</h3>
+                        </div>
+                        <div data-speed="1.1" class="gallery__right">
+                            <div class="text-block gallery__item">
+                                <h2 class="text-block__h">Один день цього року буде для нас особливим і ми хочемо провести його в колі близьких та друзів. Тож з великим задоволенням запрошуємо Вас розділити з нами день створення нашої сім'ї. </h2>
+                                <h3 class="text-block__h">Розпис: 7 вересня 2024 року о 16:30</h3>
+                                <h4 class="text-block__h"> за адресою м. Київ, проспект Берестейський, 42А "Новий Загс". </h4>
+                                <h5 class="text-block__h">святкування: ресторан "ORLY" Київ, бульвар Вацлава Гавела, 9В</h5>
+                            </div>
+                            <img class="gallery__item" src="img/work/3.jpg" alt="3">
+                            <img class="gallery__item" src="img/work/4.jpg" alt="4">
+                            <img class="gallery__item" src="img/work/5.jpg" alt="5">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rsvp-section">
+                <div class="container">
+                    <h2>Чи зможете ви приєднатись до святкування разом з нами?</h2>
+                    <input type="text" id="guest-name" placeholder="Ваше ім'я">
+                    <button onclick="submitRSVP(true)">Так</button>
+                    <button onclick="submitRSVP(false)">Ні</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/rsvp.js"></script>
+</body>
+</html>
