@@ -1,0 +1,56 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Logs
+logs
+*.log
+*.log.*
+
+# Fonts
+fonts/
+
+# Ignore minified and source map files
+*.min.*
+*.map
+
+# Ignore build directory
+dist/
+build/
+
+# Ignoring libraries (if any)
+libs/
+
+# Ignore generated stylesheets
+*.css.map
+
+# Ignore environment variables
+.env
+.env.local
+.env.*.local
+
+# Ignore custom configuration files
+*.local
+
+# Ignore IDE-specific files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore OS generated files
+*.DS_Store
+*.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Other
+*.swp
