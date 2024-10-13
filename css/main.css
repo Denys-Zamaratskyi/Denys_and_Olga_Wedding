@@ -1,5 +1,4 @@
-/* Main styles for the project */
-
+/* Основні стилі для проекту */
 * {
   padding: 0;
   margin: 0;
@@ -50,7 +49,6 @@ body {
 .main-title {
   font-size: calc(var(--index) * 3.3);
   position: absolute;
-  width: -moz-min-content;
   width: min-content;
   bottom: 12vh;
   line-height: 0.9;
@@ -101,12 +99,6 @@ body {
   line-height: 1.75;
 }
 
-/* Піднімаємо блок тексту під фото 6 */
-.gallery__left .text-block__h:nth-of-type(4),
-.gallery__left .text-block__h:nth-of-type(5) {
-  margin-top: -1.5rem; /* Піднімає текст на 1.5 рем */
-}
-
 .rsvp-section {
   padding: 20px;
   background-color: #f9f9f9;
@@ -132,8 +124,15 @@ body {
   cursor: pointer;
 }
 
-/* Mobile Styles */
+/* Піднімаємо блок тексту під фото 6 */
+.gallery__left .text-block__h:nth-of-type(4),
+.gallery__left .text-block__h:nth-of-type(5) {
+  margin-top: -1.5rem; /* Піднімає текст на 1.5 рем */
+}
+
+/* Мобільні стилі */
 @media (max-width: 768px) {
+  /* Загальні налаштування для мобільних пристроїв */
   .hero {
     left: 0;
     top: 0;
@@ -159,27 +158,45 @@ body {
     padding: 0 4vw;
   }
 
+  /* Адаптація галереї для мобільного вигляду */
   .gallery {
     flex-direction: column;
     padding: calc(var(--index) * 4) 0;
   }
 
+  /* Забезпечення повної ширини зображень на мобільних пристроях */
   .gallery__item {
     max-width: 100%;
     margin-bottom: var(--gallery-gap);
   }
 
+  /* Видалення структури ліворуч/праворуч у галереї */
   .gallery__left,
   .gallery__right {
+    display: flex;
+    flex-direction: column;
     margin: 0;
   }
 
+  /* Перестановка тексту та зображень */
+  .gallery__right {
+    order: 2;
+  }
+
+  .gallery__left {
+    order: 1;
+  }
+
+  /* Забезпечення правильних відступів для текстів */
   .text-block__h {
     font-size: 1.5rem;
     line-height: 2rem;
+    margin-bottom: 1.5rem;
   }
 
+  /* Адаптація секції RSVP */
   .rsvp-section {
     margin-top: 40px;
   }
 }
+ 
