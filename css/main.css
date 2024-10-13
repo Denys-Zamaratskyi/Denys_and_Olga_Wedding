@@ -1,4 +1,5 @@
-/* Основні стилі для проекту */
+/* Main styles for the project */
+
 * {
   padding: 0;
   margin: 0;
@@ -16,6 +17,7 @@
   font-family: raleway-c;
   src: url(../fonts/raleway-regular.woff2);
 }
+
 @font-face {
   font-family: outfit-c;
   src: url(../fonts/outfit-regular.woff2);
@@ -49,6 +51,7 @@ body {
 .main-title {
   font-size: calc(var(--index) * 3.3);
   position: absolute;
+  width: -moz-min-content;
   width: min-content;
   bottom: 12vh;
   line-height: 0.9;
@@ -99,6 +102,12 @@ body {
   line-height: 1.75;
 }
 
+/* Піднімаємо блок тексту під фото 6 */
+.gallery__left .text-block__h:nth-of-type(4),
+.gallery__left .text-block__h:nth-of-type(5) {
+  margin-top: -1.5rem; /* Піднімає текст на 1.5 рем */
+}
+
 .rsvp-section {
   padding: 20px;
   background-color: #f9f9f9;
@@ -124,15 +133,8 @@ body {
   cursor: pointer;
 }
 
-/* Піднімаємо блок тексту під фото 6 */
-.gallery__left .text-block__h:nth-of-type(4),
-.gallery__left .text-block__h:nth-of-type(5) {
-  margin-top: -1.5rem; /* Піднімає текст на 1.5 рем */
-}
-
-/* Мобільні стилі */
+/* Mobile Styles */
 @media (max-width: 768px) {
-  /* Загальні налаштування для мобільних пристроїв */
   .hero {
     left: 0;
     top: 0;
@@ -158,45 +160,68 @@ body {
     padding: 0 4vw;
   }
 
-  /* Адаптація галереї для мобільного вигляду */
   .gallery {
     flex-direction: column;
     padding: calc(var(--index) * 4) 0;
   }
 
-  /* Забезпечення повної ширини зображень на мобільних пристроях */
   .gallery__item {
     max-width: 100%;
     margin-bottom: var(--gallery-gap);
   }
 
-  /* Видалення структури ліворуч/праворуч у галереї */
   .gallery__left,
   .gallery__right {
-    display: flex;
-    flex-direction: column;
     margin: 0;
   }
 
-  /* Перестановка тексту та зображень */
-  .gallery__right {
-    order: 2;
-  }
-
-  .gallery__left {
-    order: 1;
-  }
-
-  /* Забезпечення правильних відступів для текстів */
   .text-block__h {
     font-size: 1.5rem;
     line-height: 2rem;
-    margin-bottom: 1.5rem;
   }
 
-  /* Адаптація секції RSVP */
   .rsvp-section {
     margin-top: 40px;
   }
+
+  /* Порядок для мобільної версії */
+  .main-title {
+    order: 1; /* Текст: "Запрошуємо на весілля" */
+  }
+
+  .gallery__item:nth-of-type(6) {
+    order: 2; /* Фото 5 */
+  }
+
+  .gallery__right .text-block {
+    order: 3; /* Текст: Один день цього року буде для нас особливим... */
+  }
+
+  .gallery__item:nth-of-type(1) {
+    order: 4; /* Фото 1 */
+  }
+
+  .gallery__item:nth-of-type(3) {
+    order: 5; /* Фото 3 */
+  }
+
+  .gallery__item:nth-of-type(4) {
+    order: 6; /* Фото 2 */
+  }
+
+  .gallery__item:nth-of-type(5) {
+    order: 7; /* Фото 4 */
+  }
+
+  .gallery__left .text-block {
+    order: 8; /* Текст: Не обтяжуйте себе вибором подарунку... */
+  }
+
+  .gallery__item:nth-of-type(2) {
+    order: 9; /* Фото 6 */
+  }
+
+  .gallery__left .text-block:last-of-type {
+    order: 10; /* Текст: Для наших маленьких гостей у ресторані... */
+  }
 }
- 
